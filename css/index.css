@@ -1,0 +1,169 @@
+*{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+body{
+    margin:0;
+    /* padding:20px 0 0 0; */
+    height:1500px;
+    overflow-x:hidden;
+    font-size: 1rem;
+}
+
+/*Header video style*/
+.container{
+    height:100vh;
+    display: grid;
+    align-items: center;
+    color:rgb(255,255,255);
+}
+
+.PrimeHeader{
+    max-width: 960px;
+    padding-left:1rem;
+    padding-right:1rem;
+    margin:auto;
+    text-align: center;
+}
+.headerVid{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.headerVid>video{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.overlay{
+    height:100vh;
+    width: 100vw;
+    position: absolute;
+    top:0;
+    left:0;
+    background:rgb(1,1,1,0.55);
+    z-index: 1;
+}
+.headerCont{
+    z-index:2;
+}
+.headerCont>h1{
+    font-size: 4rem;
+}
+/*Call button style*/
+.Callform>button{
+    outline: none;
+    max-width: 250px;
+    width: 100%;
+    height: 60px;
+    background: rgb(0, 207, 0);
+    border:none;
+    color: rgb(255,255,255);
+    font-weight: 550;
+    font-size: 20px;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.Callform>button:active{
+    background: rgb(0, 187, 0);
+}
+
+
+/*The style for the cards*/
+.CardsSection{
+    width:100vw;
+    display:flex;
+    background: rgb(247, 247, 247);
+}
+.card{
+    width:250px;
+    height:300px;
+    margin: 35px auto;
+    border-radius: 10px;
+    background:rgb(255,255,255);
+    text-align: center;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(4em);
+    transition: transform 4s .25s cubic-bezier(0,1,0.3,1),
+                opacity 3s .25s ease-out;
+    -webkit-box-shadow: -24px 21px 71px -16px rgba(0,0,0,0.75);
+    -moz-box-shadow: -24px 21px 71px -16px rgba(0,0,0,0.75);
+    box-shadow: -24px 21px 71px -16px rgba(0,0,0,0.75);
+    will-change: trasform, opacity;
+}
+.card>span>img{
+    width:110px;
+    height:110px;
+    border-radius: 50%;
+    border:1px solid silver;
+    margin: 15px;
+}
+.Card-content{
+    margin: 30px 5px;
+}
+.Card-content>h3{
+    margin:0;
+}
+/*item section style*/
+.ItemSection{
+    width:100vw;
+    background: rgb(240, 240, 240);
+    padding: 20px 30px;
+}
+.newSection{
+    display: flex;
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 10px;
+    position: relative;
+    overflow:hidden;
+}
+/*Red Ribbon style*/
+.ribbon{
+    width:300px;
+    height:40px;
+    color:white;
+    position: absolute;
+    top:5vh;
+    left:-7vw;
+    background: rgb(184, 0, 0);
+    font-weight: 600;
+    font-size: 26px;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 5px;
+    transform: rotate(-45deg);
+    z-index: 1;
+}
+
+
+/* the class of the fading in items */
+.visible{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/*Measurements, changes and updates to fit Mobile status*/
+@media only screen and (max-width:850px) and (min-width:651px){
+    .card{
+        width: 200px;
+        height: 250px;
+    }
+}
+@media only screen and (max-width:1200px){
+    .ribbon{
+        left:-10vw;
+    }
+}
+@media only screen and (max-width:950px){
+    .ribbon{
+        left:-13vw;
+    }
+}

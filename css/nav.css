@@ -1,0 +1,142 @@
+/*nav bar style*/
+*{
+    -webkit-tap-highlight-color: none;
+}
+/* navigation style */
+/* navigation container */
+nav{
+    max-width:100vw;
+    width: 100%;
+    height:72px;
+    position:fixed;
+    top:0;
+    left:0;
+    display:flex;
+    z-index: 999;
+    border-bottom: 1px solid rgb(177, 177, 177);
+    background:rgb(255,255,255);
+    -moz-box-shadow:inset 0 -10px 10px 10px #000000;
+    -webkit-box-shadow: inset 0 -10px 10px 10px #000000;
+    box-shadow:inset 0 -10px 10px -10px #000000;
+}
+.Logo>a{
+    text-decoration: none;
+}
+.Logo>a>h2{
+    margin-left:10px;
+    font-family: fantasy;
+    color: black;
+}
+/*list items style*/
+nav>ul{
+    margin-left:3%;
+    padding:0;
+    display:flex;
+    vertical-align: baseline;
+    max-width: 100%;
+    width: 100vw;
+    overflow: hidden;
+}
+nav>ul>li{
+    list-style-type:none;
+    margin: 5px 3vw;
+    font-size:25px;
+    letter-spacing: 2px;
+}
+nav>ul>li>a{
+    text-decoration: none;
+    color:rgb(1,1,1);
+    font-weight: 550;
+}
+nav>ul>li>a:hover{
+    opacity: 0.5 !important;
+}
+nav>ul>li>a:active{
+    color:rgb(143, 143, 143) !important;
+}
+/*logout p style*/
+.logout-submit{
+    border:none;
+    background:rgb(67, 190, 67);
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+/*hamburger check button*/
+.checkbtn{
+    font-size:30px;
+    font-weight: 600;
+    color: #3399ff;
+    float: right;
+    line-height: 72px;
+    margin-right: 10px;
+    cursor: pointer;
+    display:none;
+}
+#checkbox{
+    display:none;
+}
+
+/*hamburger style*/
+.box-shadow-menu {
+    position: relative;
+    padding-left: 1.25em;
+  }
+  .box-shadow-menu:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.25em;
+    width: 1em;
+    height: 0.15em;
+    background: rgb(0, 207, 0);
+    box-shadow: 
+      0 0.25em 0 0 rgb(0, 207, 0),
+      0 0.5em 0 0 rgb(0, 207, 0);
+  }
+
+
+@media only screen and (max-width: 1000px){
+    nav>ul>li{
+        margin: 5px 3vw;
+    }
+}
+@media only screen and (max-width: 750px){
+    nav>ul>li{
+        margin: 5px 2vw;
+    }
+}
+@media only screen and (max-width:700px){
+    nav{
+        max-width: unset;
+        display: block;
+    }
+    .Logo>h2{
+        margin-left:10px;
+        font-family: fantasy;
+    }
+    nav>ul{
+        top: 72px;
+        left: -100%;
+        margin: 0;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        text-align: center;
+        background: rgb(255,255,255);
+        display:block;
+        transition: all 0.3s;
+
+    }
+    nav>ul>li{
+        font-size: 30px;
+        margin: 15% 0;
+    }
+    .checkbtn{
+        display:block;
+    }
+    #checkbox:checked ~ ul{
+        left:0;
+    }
+}
